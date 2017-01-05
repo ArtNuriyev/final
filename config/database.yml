@@ -26,6 +26,9 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
+  username: cornelius
+  password: forklift
   database: final_development
 
   # The specified database role being used to connect to postgres.
@@ -60,6 +63,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+    host: localhost
+  username: cornelius
+  password: forklift
   database: final_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -83,6 +89,7 @@ test:
 #
 production:
   <<: *default
-  database: final_production
-  username: final
+  host: localhost
+  username: cornelius
+
   password: <%= ENV['FINAL_DATABASE_PASSWORD'] %>
